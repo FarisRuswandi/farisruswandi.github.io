@@ -2,46 +2,130 @@
 <html>
 <head>
 <title>BIODATA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
+* {
+box-sizing: border-box;
+}
+
+header {
 background-color:rgb(20,20,20);
-color:white;
-font-family:arial;
+padding: 10px;
+text-align: center;
+font-size: 150%;
+color: white;
+}
+
+body {
+background-image:url("background.jpg");
+font-family:verdana;
 }
 
 pre {
 color:white;
-font-size:130%;
+font-size:90%;
+font-family:verdana;
 }
+
+nav {
+float:left;
+width: 49%;
+background-color:rgb(20,20,20);
+padding: 20px;
+text-align:justify;
+height:350px;
+color:white;
+font-family:verdana;
+}
+
+
+article {
+float: right;
+padding:20px;
+width: 49%;
+background-color:rgb(20,20,20);
+color:white;
+text-align:justify;
+height:350px;
+font-familiy:verdana;
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+background-color:black;
+padding:10px;
+text-align:center;
+color:white;
+font-size:80%
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
 
 </style>
 </head>
 <body>
 
-
+<header>
 <h1><center>BIODATA<center></h1>
+</header>
 <br><center>
 <img src="1014359.jpg"
 style="width:310px;height:280px;"></center>
 <br>
 <p>
-<pre>
-<!-- ini adalah coment -->
-Nama				: Muhammad Faris Ruswandi
-NIM				: D1041171016
-Tempat/Tanggal Lahir		: Pontianak, 27 Juli 1999
-Alamat				: Jalan Husin Hamzah Komplek Pilar Emas 1 B23
-Pekerjaan			: Mahasiswa
-Nomor KTP			: 6171032707990018
-Nomor HP			: 081258365859
-Agama				: Islam
-Nama Ayah			: Herry Ruswandi
-Nama Ibu			: Yulisnar
-</pre>
+<nav>
+<ul>
+<li>Nama : Muhammad Faris Ruswandi</li><br>
+<li>NIM	: D1041171016</li><br>
+<li>Tempat/Tanggal Lahir : Pontianak, 27 Juli 1999</li><br>
+<li>Alamat : Jalan Husin Hamzah Komplek Pilar Emas 1 B23</li><br>
+<li>Pekerjaan: Mahasiswa</li><br>
+<li>Tempat Bekerja : Universitas Tanjungpura</li>
+</ul>
+</nav>
+
+<article>
+<ul>
+<li>NIK : 6171032707990018</li><br>
+<li>Nomor HP : 081258365859</li><br>
+<li>Agama : Islam</li><br>
+<li>Nama Ayah : Herry Ruswandi</li><br>
+<li>Nama Ibu : Yulisnar</li><br>
+<li>Kewarganegaraan : Indonesia</li><br>
+</ul>
+</article>
+
+<p style="
+background-color:rgb(20,20,20);padding: 15px;text-align:center;color:white;font-family:verdana;">
+Klik link dibawah untuk kembali ke Kata Pengantar<br>
+<a href="index.html">Kembali ke Kata Pengantar</a>
 </p>
 
+<li>
 
+</p>
+
+<footer>
+<p>Kata pengantar ini merupakan tugas Pemrograman Web pertama yang diberikan oleh Pak Morteza.
+Web ini dibuat berdasarkan referensi dari www.w3schools.com.
 <br>
-<a href="index.html">Kembali ke Kata Pengantar</a>
+Universitas Tanjungpura, Pontianak, 2019
+</p>
+</footer>
+
+
 </body>
 </html>

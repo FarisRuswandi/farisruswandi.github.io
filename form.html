@@ -2,23 +2,117 @@
 <html>
 <head>
 <title>Formulir</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-image:url("background.jpg");
+color:black;
+font-family:verdana;
+}
+
+nav {
+float:left;
+width: 40%;
+background-color:rgb(20, 20, 20);
+padding: 20px;
+text-align:justify;
+font-size:110%;
+height:600px;
+color:white;
+}
+
+
+
+article {
+text-align:center;
+float: left;
+padding:20px;
+width: 60%;
+background-color:white;
+color:black;
+height:600px;
+}
+
+footer {
+background-color:black;
+padding:10px;
+text-align:center;
+color:white;
+font-size:80%
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+
 </head>
-<body style ="background-color:grey;color:black;font-family:verdana;">
-<h2>FORMULIR</h2>
+<nav>
+<h2 style="font-size:150%;text-align:center;">FORMULIR</h2>
 <form action="/form.php">
-Nama 			:<br>
+Nama :<br>
 <input type="text" name="Nama"><br><br>
-NIM				:<br>
+NIM	:<br>
 <input type="text" name="Nim"><br><br>
-Alamat			:<br>
+Alamat :<br>
 <input type="text" name="Alamat"><br><br>
-Tanggal lahir	:<br>
+Tempat Lahir :<br>
+<input type="text" name="Tempat Lahir"><br><br>
+Tanggal lahir :<br>
 <input type="date" name="tanggal"><br><br>
-Jenis Kelamin	:<br>
+Jenis Kelamin :<br>
 <input type="radio" name="jeniskelamin" value="Pria">Pria<br>
 <input type="radio" name="jeniskelamin" value="Wanita">Wanita<br>
 <input type="radio" name="jeniskelamin" value="Unknown">Unknown<br><br>
 <input type="submit" value="Kumpulkan">
 </form>
+</nav>
+
+<article>
+<p>Silakan nonton video atau dengar musik disini<br>
+<br>
+VIDEO :<br><br>
+<video width="400" controls>
+<source src="bonfire meme.mp4"
+type="video/mp4">
+<source src="bonfire meme.ogg"
+type="video/ogg">
+</video>
+<br>
+<br>
+LAGU :<br>
+<i style ="font-size:80%;">(WARNING! Lagu Sangat bagus, bisa mengeluarkan air mata)</i>
+<br>
+<br>
+<audio controls>
+<source src="kufaku band.ogg"
+type="audio/ogg">
+<source src="kufaku band.mp3"
+type="audio/mpeg">
+</audio>
+<br>
+<br>
+<a href="index.html">Kembali ke Kata Pengantar</a>
+</article>
+
+<footer>
+<p>Kata pengantar ini merupakan tugas Pemrograman Web pertama yang diberikan oleh Pak Morteza.
+Web ini dibuat berdasarkan referensi dari www.w3schools.com.
+<br>
+Universitas Tanjungpura, Pontianak, 2019
+</p>
+</footer>
+
+
 </body>
 </html>
