@@ -18,12 +18,12 @@ font-family:verdana;
 
 nav {
 float:left;
-width: 40%;
+width: 55%;
 background-color:rgb(20, 20, 20);
 padding: 20px;
 text-align:justify;
 font-size:110%;
-height:600px;
+height:700px;
 color:white;
 }
 
@@ -33,10 +33,10 @@ article {
 text-align:center;
 float: left;
 padding:20px;
-width: 60%;
-background-color:white;
+width: 45%;
+background-color:rgb(200,200,200);
 color:black;
-height:600px;
+height:700px;
 }
 
 footer {
@@ -59,27 +59,112 @@ font-size:80%
 </head>
 <nav>
 <h2 style="font-size:150%;text-align:center;">FORMULIR</h2>
-<form action="/form.php">
-Nama :<br>
-<input type="text" name="Nama"><br><br>
-NIM	:<br>
-<input type="text" name="Nim"><br><br>
-Alamat :<br>
-<input type="text" name="Alamat"><br><br>
-Tempat Lahir :<br>
-<input type="text" name="Tempat Lahir"><br><br>
-Tanggal lahir :<br>
-<input type="date" name="tanggal"><br><br>
-Jenis Kelamin :<br>
+
+<script type="text/javascript">
+function validate () {
+obj = document.form;
+nama = obj.nama.value;
+nim = obj.nim.value;
+alamat = obj.alamat.value;
+tempat_lahir = obj.tempat_lahir.value;
+tanggal_lahir = obj.tanggal_lahir.value;
+ptn = obj.ptn.value;
+smt = obj.smt.selectedIndex;
+submitOK ="True";
+
+if (nama == ""){
+alert ("Nama harus diisi!")
+obj.nama.focus()
+return false;
+}
+
+if (nim == ""){
+alert ("NIM harus diisi!")
+obj.nim.focus()
+return false;
+}
+
+if (alamat == ""){
+alert ("Alamat harus diisi!")
+obj.alamat.focus()
+return false;
+}
+
+if (tempat_lahir == ""){
+alert ("Tempat lahir harus diisi!")
+obj.tempat_lahir.focus()
+return false;
+}
+
+if (tanggal_lahir == ""){
+alert ("Tanggal lahir harus diisi!")
+obj.tanggal_lahir.focus()
+return false;
+}
+
+if (ptn == ""){
+alert ("Perguruan Tinggi harus diisi!")
+obj.ptn.focus()
+return false;
+}
+
+if (smt == ""){
+alert ("Semester harus diisi!")
+obj.smt.focus()
+return false;
+}
+
+if (submitOK == "False") {
+return false;
+}
+}
+</script>
+
+<form name=form method=post action=# onsubmit="return validate ()">
+<p>
+Nama <br>
+<input type=text name=nama size=42><br><br>
+NIM <br>
+<input type=text name=nim size=42><br><br>
+Alamat <br>
+<input type=text name=alamat size=42><br><br>
+Tempat Lahir <br>
+<input type=text name=tempat_lahir size=42><br><br>
+Tanggal lahir <br>
+<input type=date name=tanggal_lahir><br><br>
+Jenis Kelamin <br>
 <input type="radio" name="jeniskelamin" value="Pria">Pria<br>
-<input type="radio" name="jeniskelamin" value="Wanita">Wanita<br>
-<input type="radio" name="jeniskelamin" value="Unknown">Unknown<br><br>
-<input type="submit" value="Kumpulkan">
+<input type="radio" name="jeniskelamin" value="Wanita">Wanita<br><br>
+Perguruan Tingi <br>
+<input type=text name=ptn size=42><br><br>
+Semester<br>
+<select size=1 name=smt>
+ <option>1</option>
+ <option>2</option>
+ <option>3</option>
+ <option>4</option>
+ <option>5</option>
+ <option>6</option>
+ <option>7</option>
+ <option>8</option>
+ <option>9</option>
+ <option>10</option>
+ <option>11</option>
+ <option>12</option>
+ <option>13</option>
+ <option>14</option>
+</select><br><br>
+
+
+
+<input type=submit value=Kumpulkan>
+<input type=reset value=Reset>
+</p>
 </form>
 </nav>
 
 <article>
-<p>Silakan nonton video atau dengar musik disini<br>
+<p><br><h2>Silakan nonton video atau dengar musik disini</h2><br>
 <br>
 VIDEO :<br><br>
 <video width="400" controls>
@@ -106,7 +191,7 @@ type="audio/mpeg">
 </article>
 
 <footer>
-<p>Kata pengantar ini merupakan tugas Pemrograman Web pertama yang diberikan oleh Pak Morteza.
+<p>Web ini merupakan tugas Pemrograman Web pertama yang diberikan oleh Pak Morteza.
 Web ini dibuat berdasarkan referensi dari www.w3schools.com.
 <br>
 Universitas Tanjungpura, Pontianak, 2019
