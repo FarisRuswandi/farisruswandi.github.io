@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulir</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+box-sizing: border-box;
+}
+
+body {
+background-image:url("background.jpg");
+color:black;
+font-family:helvetica;
+}
+
+nav {
+float:left;
+width: 55%;
+background-color:rgb(30, 30, 30);
+padding: 20px;
+text-align:justify;
+font-size:110%;
+height:720px;
+color:white;
+}
+
+
+
+article {
+text-align:center;
+float: left;
+padding:20px;
+width: 45%;
+background-color:rgb(150,150,150);
+color:black;
+height:720px;
+border: 5px solid white;
+}
+
+footer {
+background-color:black;
+padding:10px;
+color:white;
+font-size:80%
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<nav>
+<h1 style="font-size:150%;text-align:center;">FORMULIR</h1>
+
+<script type="text/javascript">
+function validate () {
+obj = document.form;
+nama = obj.nama.value;
+nim = obj.nim.value;
+alamat = obj.alamat.value;
+tempat_lahir = obj.tempat_lahir.value;
+tanggal_lahir = obj.tanggal_lahir.value;
+ptn = obj.ptn.value;
+smt = obj.smt.selectedIndex;
+submitOK ="True";
+
+if (nama == ""){
+alert ("Nama harus diisi!")
+obj.nama.focus()
+return false;
+}
+
+if (nim == ""){
+alert ("NIM harus diisi!")
+obj.nim.focus()
+return false;
+}
+
+if (alamat == ""){
+alert ("Alamat harus diisi!")
+obj.alamat.focus()
+return false;
+}
+
+if (tempat_lahir == ""){
+alert ("Tempat lahir harus diisi!")
+obj.tempat_lahir.focus()
+return false;
+}
+
+if (tanggal_lahir == ""){
+alert ("Tanggal lahir harus diisi!")
+obj.tanggal_lahir.focus()
+return false;
+}
+
+if (ptn == ""){
+alert ("Perguruan Tinggi harus diisi!")
+obj.ptn.focus()
+return false;
+}
+
+if (smt == ""){
+alert ("Semester harus diisi!")
+obj.smt.focus()
+return false;
+}
+
+if (submitOK == "False") {
+return false;
+}
+}
+</script>
+
+
+<form name=form method=post action=# onsubmit="return validate ()">
+<p>
+Nama <br>
+<input type=text name=nama size=42><br><br>
+NIM <br>
+<input type=text name=nim size=42><br><br>
+Alamat <br>
+<input type=text name=alamat size=42><br><br>
+Tempat Lahir <br>
+<input type=text name=tempat_lahir size=42><br><br>
+Tanggal lahir <br>
+<input type=date name=tanggal_lahir><br><br>
+Jenis Kelamin <br>
+<input type="radio" name="jeniskelamin" value="Pria">Pria<br>
+<input type="radio" name="jeniskelamin" value="Wanita">Wanita<br><br>
+Perguruan Tinggi <br>
+<input type=text name=ptn size=42><br><br>
+Semester<br>
+<select size=1 name=smt>
+ <option>1</option>
+ <option>2</option>
+ <option>3</option>
+ <option>4</option>
+ <option>5</option>
+ <option>6</option>
+ <option>7</option>
+ <option>8</option>
+ <option>9</option>
+ <option>10</option>
+ <option>11</option>
+ <option>12</option>
+ <option>13</option>
+ <option>14</option>
+</select><br><br>
+
+
+
+<input type=submit value=Kumpulkan>
+<input type=reset value=Reset>
+</p>
+</form>
+</nav>
+
+<article>
+<p><br><h2>Silakan nonton video atau dengar musik disini</h2><br>
+<br>
+VIDEO :<br><br>
+<video width="400" controls>
+<source src="bonfire meme.mp4"
+type="video/mp4">
+<source src="bonfire meme.ogg"
+type="video/ogg">
+</video>
+<br>
+<br>
+LAGU :<br>
+<i style ="font-size:80%;">(WARNING! Lagu Sangat bagus, bisa mengeluarkan air mata)</i>
+<br>
+<br>
+<audio controls>
+<source src="kufaku band.ogg"
+type="audio/ogg">
+<source src="kufaku band.mp3"
+type="audio/mpeg">
+</audio>
+<br>
+<br>
+<a href="index.html">Kembali ke Kata Pengantar</a>
+</article>
+
+<footer>
+<center>
+<p>Web ini merupakan tugas Pemrograman Web pertama yang diberikan oleh Pak Morteza.
+Web ini dibuat berdasarkan referensi dari www.w3schools.com.
+<br>
+Universitas Tanjungpura, Pontianak, 2019<BR><BR>
+<img src="untan.jpg" style="width:30px;height:30px">
+<img src="w3schools.jpg" style="width:30px;height:30px">
+</center>
+</p>
+
+
+</footer>
+
+
+</body>
+</html>
